@@ -2,8 +2,11 @@
 
 'use strict';
 
-import program from 'commander';
-import pkg from '../package.json';
+const program = require('commander');
+const updateNotifier = require('update-notifier');
+const pkg = require('../package.json');
+
+updateNotifier({pkg}).notify();
 
 program
   .version(pkg.version)
