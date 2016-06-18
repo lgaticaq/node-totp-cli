@@ -35,7 +35,7 @@
     "inquirer": "^1.0.3",
     "notp": "^2.0.3",
     "thirty-two": "^1.0.1",
-    "update-notifier": "^1.0.0"
+    "update-notifier": "^1.0.1"
   },
   "devDependencies": {
     "eslint": "^2.13.0"
