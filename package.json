@@ -1,6 +1,6 @@
 {
   "name": "totp-cli",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Insert/Generate a TOTP for a service from pass",
   "main": "src",
   "scripts": {
