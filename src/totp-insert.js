@@ -23,7 +23,7 @@ const setCode = service => {
       message: `Re-Enter code for ${service}:`,
       name: 'code2'
     }
-  ], (answers) => {
+  ]).then(answers => {
     if (answers.code1 === answers.code2) {
       const pass = exec(`pass insert 2fa/${service}/code`);
       pass.stdin.write(`${answers.code1}\n`);
