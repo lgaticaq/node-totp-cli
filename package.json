@@ -4,13 +4,16 @@
   "description": "Insert/Generate a TOTP for a service from pass",
   "main": "src",
   "scripts": {
-    "prepublish": "eslint src",
+    "lint": "eslint . --fix",
+    "format": "prettier-standard 'src/**/*.js'",
+    "prepublish": "npm run lint -s && npm run format -s",
+    "precommit": "lint-staged",
     "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags && npm publish",
     "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags && npm publish",
     "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags && npm publish"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=8"
   },
   "bin": {
     "totp": "src/totp.js"
@@ -32,44 +35,50 @@
   },
   "homepage": "https://github.com/lgaticaq/node-totp-cli#readme",
   "dependencies": {
-    "chalk": "^2.0.0",
-    "commander": "^2.9.0",
-    "copy-paste": "^1.3.0",
-    "inquirer": "^4.0.0",
-    "notp": "^2.0.3",
-    "thirty-two": "^1.0.2",
-    "update-notifier": "^2.1.0"
+    "chalk": "2.3.0",
+    "commander": "2.12.1",
+    "copy-paste": "1.3.0",
+    "inquirer": "4.0.0",
+    "notp": "2.0.3",
+    "thirty-two": "1.0.2",
+    "update-notifier": "2.3.0"
   },
   "devDependencies": {
     "eslint": "4.11.0",
-    "generate-changelog": "1.6.0"
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-node": "5.2.1",
+    "eslint-plugin-promise": "3.6.0",
+    "eslint-plugin-standard": "3.0.1",
+    "generate-changelog": "1.6.0",
+    "husky": "0.14.3",
+    "lint-staged": "5.0.0",
+    "prettier-standard": "7.0.3"
   },
   "eslintConfig": {
-    "env": {
-      "es6": true,
-      "node": true
-    },
-    "extends": "eslint:recommended",
+    "extends": "standard",
     "rules": {
-      "indent": [
-        2,
-        2
-      ],
-      "linebreak-style": [
-        2,
-        "unix"
-      ],
-      "quotes": [
-        2,
-        "single"
-      ],
-      "semi": [
-        2,
-        "always"
-      ],
       "no-console": [
-        0
+        "error"
       ]
     }
+  },
+  "eslintIgnore": [
+    "coverage"
+  ],
+  "lint-staged": {
+    "linters": {
+      "src/**/*.js": [
+        "eslint --fix",
+        "prettier-standard",
+        "git add"
+      ]
+    }
+  },
+  "renovate": {
+    "automerge": "minor",
+    "extends": [
+      ":library"
+    ]
   }
 }
