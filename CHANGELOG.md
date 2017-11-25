@@ -1,3 +1,36 @@
+## 3.0.0 (2017-11-25)
+
+##### Chores
+
+* **deps:**
+  * update dependency generate-changelog to v1.6.0 ([a0503410](https://github.com/lgaticaq/node-totp-cli/commit/a05034105fd824bb872b78526eb0b4a468982ed4))
+  * update dependency eslint to v4.11.0 ([ae703f27](https://github.com/lgaticaq/node-totp-cli/commit/ae703f2780845870849401a4045a52291a9ebe40))
+  * update dependency eslint to v4.10.0 ([88e50224](https://github.com/lgaticaq/node-totp-cli/commit/88e50224bcc48be8a9579abb96b15fb032d36900))
+  * update dependency eslint to v4.9.0 ([a0bf91c1](https://github.com/lgaticaq/node-totp-cli/commit/a0bf91c184995eab2b72ca584ed3b0c97ae44329))
+  * update dependency eslint to v4.8.0 ([7a8d9a4d](https://github.com/lgaticaq/node-totp-cli/commit/7a8d9a4ddbf5a3afe63c62e05de6e0b590691c99))
+  * update dependency generate-changelog to v1.5.0 ([eb67b778](https://github.com/lgaticaq/node-totp-cli/commit/eb67b7784bc6d52e113a08991bcffec0e2642a78))
+  * update dependency eslint to v4.7.2 ([fab022be](https://github.com/lgaticaq/node-totp-cli/commit/fab022be229e35e490e77d99ed6c7169f6a37996))
+  * update dependency eslint to v4.7.1 ([02ac1203](https://github.com/lgaticaq/node-totp-cli/commit/02ac1203ccda5fdbacd393f7f50a5ba250ab087c))
+  * update dependency eslint to v4.7.0 ([6a71174f](https://github.com/lgaticaq/node-totp-cli/commit/6a71174f35a451228a7cdc005cce03f897bfb93f))
+* **package:** update eslint to version 4.0.0 ([a99415eb](https://github.com/lgaticaq/node-totp-cli/commit/a99415eb3d8648200d38d19aaefa99c4693086aa))
+
+##### New Features
+
+* **node:** update min node version to v8 Update dependencies Remove yarn ([5d37bb81](https://github.com/lgaticaq/node-totp-cli/commit/5d37bb812df765633b8f1e21760355a354a2ea11))
+
+##### Bug Fixes
+
+* **deps:** update dependency inquirer to v^4.0.0 ([af7fcab7](https://github.com/lgaticaq/node-totp-cli/commit/af7fcab70672bee3857444b31e62f25d412543e1))
+* **package:** update chalk to version 2.0.0 ([2576aa18](https://github.com/lgaticaq/node-totp-cli/commit/2576aa18bce15f6c8994fe3fa382c708b25d57a7))
+
+##### Refactors
+
+* **deps:** renovate pin dependencies packages ([8c1a63ab](https://github.com/lgaticaq/node-totp-cli/commit/8c1a63ab53303ba3530655d4878050563a3f3fd6))
+
+##### Code Style Changes
+
+* **standard:** migrate to standardjs ([148b4012](https://github.com/lgaticaq/node-totp-cli/commit/148b4012c79a3d80bffc64c2ab86ee658e99d9f8))
+
 #### 2.0.1 (2017-3-29)
 
 ##### Chores
