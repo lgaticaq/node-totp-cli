@@ -41,7 +41,7 @@
     "inquirer": "4.0.2",
     "notp": "2.0.3",
     "thirty-two": "1.0.2",
-    "update-notifier": "2.5.0"
+    "update-notifier": "2.6.0"
   },
   "devDependencies": {
     "eslint": "5.16.0",
