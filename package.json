@@ -6,11 +6,12 @@
   "scripts": {
     "lint": "eslint . --fix",
     "format": "prettier-standard 'src/**/*.js'",
-    "prepublish": "npm run lint -s && npm run format -s",
+    "prepublish": "npm run snyk-protect && npm run lint -s && npm run format -s",
     "precommit": "lint-staged",
     "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags && npm publish",
     "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags && npm publish",
-    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags && npm publish"
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags && npm publish",
+    "snyk-protect": "snyk protect"
   },
   "engines": {
     "node": ">=8"
@@ -41,7 +42,8 @@
     "inquirer": "4.0.2",
     "notp": "2.0.3",
     "thirty-two": "1.0.2",
-    "update-notifier": "2.5.0"
+    "update-notifier": "2.5.0",
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "eslint": "5.16.0",
@@ -80,5 +82,6 @@
     "extends": [
       ":library"
     ]
-  }
+  },
+  "snyk": true
 }
